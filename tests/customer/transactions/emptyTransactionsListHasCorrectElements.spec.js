@@ -17,6 +17,7 @@ test('Assert the empty transactions list has correct values', async ({
   7. Assert first column header conatins text "Transaction Type"
   8. Assert the first row in table is hidden
   */
+ 
   const customerLoginPage = new CustomerLoginPage(page);
   const accountPage = new CustomerAccountPage(page);
   const transactionsPage = new TransactionsPage(page);

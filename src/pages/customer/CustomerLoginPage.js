@@ -24,6 +24,7 @@ export class CustomerLoginPage {
   async clickLoginButton() {
     await this.loginButton.click();
   }
+  
 
   async assertSelectCustomerDropdownIsVisible() {
     await expect(this.customerDropDown).toBeVisible();

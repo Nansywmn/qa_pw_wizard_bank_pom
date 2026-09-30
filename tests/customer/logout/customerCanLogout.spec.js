@@ -15,6 +15,7 @@ test('Assert correct customer Logout', async ({ page }) => {
   https://www.globalsqa.com/angularJs-protractor/BankingProject/#/customer
   7. Assert the drop-down is present with empty value 
   */
+ 
   const bankHomePage = new BankHomePage(page);
   const customerLoginPage = new CustomerLoginPage(page);
   const accountPage = new CustomerAccountPage(page);

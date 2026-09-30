@@ -17,7 +17,7 @@ export class BankManagerMainPage {
     await this.page.waitForURL('/angularJs-protractor/BankingProject/#/manager');
   }
 
-    async varifyButtonsVisible(){
+    async verifyButtonsVisible(){
       await expect(this.addCustomerBtn).toBeVisible();
       await expect(this.openAccountBtn).toBeInViewport();
       await expect(this.customersBtn).toBeVisible();
@@ -27,7 +27,7 @@ export class BankManagerMainPage {
       await this.homeBtn.click()
     }
 
-      async varifyButtonsNotVisible(){
+      async verifyButtonsNotVisible(){
       await expect(this.addCustomerBtn).not.toBeVisible();
       await expect(this.openAccountBtn).not.toBeInViewport();
       await expect(this.customersBtn).not.toBeVisible();

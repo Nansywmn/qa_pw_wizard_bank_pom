@@ -13,7 +13,6 @@ test('Assert customer has correct bank data', async ({ page }) => {
   5. Assert Balance text
   6. Assert Currency text
   */
-
   const loginPage = new CustomerLoginPage(page);
   const accountPage = new CustomerAccountPage(page);
 

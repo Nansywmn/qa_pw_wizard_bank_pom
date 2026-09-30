@@ -18,6 +18,7 @@ test('Assert the customer cannot withdraw money with empty balance', async ({
   8. Assert error message is visible:
     'Transaction Failed. You can not withdraw amount more than the balance.'
   */
+ 
   const customerLoginPage = new CustomerLoginPage(page);
   const accountPage = new CustomerAccountPage(page);
 

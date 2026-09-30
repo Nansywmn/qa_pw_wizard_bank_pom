@@ -23,7 +23,7 @@ export class BankHomePage {
     await this.managerLoginButton.click();
   }
 
-  async varifyButtonsVisible(){
+  async verifyButtonsVisible(){
     await expect(this.customerLoginButton).toBeVisible();
     await expect(this.managerLoginButton).toBeVisible();
   }
