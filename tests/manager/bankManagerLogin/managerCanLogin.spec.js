@@ -19,6 +19,6 @@ test('Assert manager can Login', async ({ page }) => {
  await bankHomePage.open();
  await bankHomePage.clickManagerLoginButton();
  await bankManagerMainPage.pageLoaded();
- await bankManagerMainPage.farifyButtonsVisible();
+ await bankManagerMainPage.varifyButtonsVisible();
 
 });

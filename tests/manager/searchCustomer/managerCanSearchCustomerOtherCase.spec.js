@@ -5,7 +5,7 @@ import { CustomersListPage } from '../../../src/pages/manager/CustomersListPage'
 import { OpenAccountPage } from '../../../src/pages/manager/OpenAccountPage';
 
 
-test.describe('Manager can search customer', () => {
+test.describe('Manager can search customer other cases', () => {
 let firstName;
 let lastName;
 let postalCode;
@@ -24,28 +24,6 @@ test.beforeEach(async ({ page }) => {
     await addCustomerPage.fillLastNameField(lastName);
     await addCustomerPage.fillPostCodeField(postalCode);
     await addCustomerPage.clickAddCustomerButton();
-});
-
-test('Assert manager can search customer by Account Number', async ({ page }) => {
-  openAccountPage = new OpenAccountPage(page);
-  addCustomerPage = new AddCustomerPage(page);
-  customersListPage = new CustomersListPage(page);
-
-  await openAccountPage.open();
-  await openAccountPage.selectUser(`${firstName} ${lastName}`)
-  await openAccountPage.selectCurrency('Dollar');
-      let accountNumber = '';
-    page.on('dialog', async (dialog) => {
-        accountNumber = dialog.message().match(/\d+$/)[0];
-        
-        await dialog.accept();
-      });
-  await openAccountPage.clickProcessBtn();
-  await addCustomerPage.goCustomersTab();
-  await customersListPage.waitForLoad();
-  await customersListPage.fillSearchField(accountNumber);
-  await customersListPage.verifyRowCustomerPresent(accountNumber);
-  await customersListPage.verifyCountRows(1)
 });
 
 test('Assert manager can search customer by Account Number', async ({ page }) => {
